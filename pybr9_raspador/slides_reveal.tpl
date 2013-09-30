@@ -1,6 +1,4 @@
 {%- extends 'reveal_internals/slides.tpl' -%}
-
-
 {% block header %}
 <!DOCTYPE html>
 <html>
@@ -27,51 +25,51 @@ document.write( '<link rel="stylesheet" href="{{resources.reveal.url_prefix}}/cs
 <!--[if lt IE 9]>
 <script src="{{resources.reveal.url_prefix}}/lib/js/html5shiv.js"></script>
 <![endif]-->
-
+<!--
 {% for css in resources.inlining.css -%}
     <style type="text/css">
     {{ css }}
     </style>
-{% endfor %}
+{% endfor %} -->
 
 <style type="text/css">
 /* Overrides of notebook CSS for static HTML export */
 .reveal {
-font-size: 20px;
+/*font-size: 20px;*/
 overflow-y: auto;
 overflow-x: hidden;
 }
 .reveal pre {
-width: 95%;
-padding: 0.4em;
-margin: 0px;
-font-family: monospace, sans-serif;
-font-size: 80%;
-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+    width: 95%;
+    padding: 0.4em;
+    margin: 0px;
+    font-family: monospace, sans-serif;
+    font-size: 80%;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
 }
 .reveal section img {
-border: 0px solid black;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0);
+    border: 0px solid black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0);
 }
 .reveal .slides {
-text-align: left;
+    text-align: left;
 }
 .reveal.fade {
-opacity: 1;
+    opacity: 1;
 }
 div.input_area {
-padding: 0.06em;
+    padding: 0.06em;
 }
 div.code_cell {
-background-color: transparent;
+    background-color: transparent;
 }
 div.prompt {
-width: 11ex;
-padding: 0.4em;
-margin: 0px;
-font-family: monospace, sans-serif;
-font-size: 80%;
-text-align: right;
+    width: 11ex;
+    padding: 0.4em;
+    margin: 0px;
+    font-family: monospace, sans-serif;
+    font-size: 80%;
+    text-align: right;
 }
 div.output_area pre {
 font-family: monospace, sans-serif;
@@ -81,13 +79,13 @@ div.output_prompt {
     /* 5px right shift to account for margin in parent container */
     margin: 5px 5px 0 0;
 }
-.rendered_html p {
+/*.rendered_html p {
 text-align: inherit;
-}
+}*/
 </style>
 
 <!-- Custom stylesheet, it must be in the same directory as the html file -->
-<link rel="stylesheet" href="custom.css">
+<!-- <link rel="stylesheet" href="custom.css"> -->
 
 </head>
 {% endblock header%}
@@ -130,7 +128,7 @@ Reveal.initialize({
     center: true,
 
     theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-    transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/none
+    transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
 
     // Optional libraries used to extend on reveal.js
     dependencies: [
