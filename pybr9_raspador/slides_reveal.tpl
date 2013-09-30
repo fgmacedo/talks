@@ -12,7 +12,7 @@
 
 <!-- General and theme style sheets -->
 <link rel="stylesheet" href="{{resources.reveal.url_prefix}}/css/reveal.css">
-<link rel="stylesheet" href="{{resources.reveal.url_prefix}}/css/theme/default.css" id="theme">
+<link rel="stylesheet" href="{{resources.reveal.url_prefix}}/css/theme/simple.css" id="theme">
 
 <!-- For syntax highlighting -->
 <link rel="stylesheet" href="{{resources.reveal.url_prefix}}/lib/css/zenburn.css">
@@ -25,12 +25,12 @@ document.write( '<link rel="stylesheet" href="{{resources.reveal.url_prefix}}/cs
 <!--[if lt IE 9]>
 <script src="{{resources.reveal.url_prefix}}/lib/js/html5shiv.js"></script>
 <![endif]-->
-<!--
+
 {% for css in resources.inlining.css -%}
     <style type="text/css">
     {{ css }}
     </style>
-{% endfor %} -->
+{% endfor %}
 
 <style type="text/css">
 /* Overrides of notebook CSS for static HTML export */

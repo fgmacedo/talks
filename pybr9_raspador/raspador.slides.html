@@ -11,7 +11,7 @@
 
 <!-- General and theme style sheets -->
 <link rel="stylesheet" href="reveal.js/css/reveal.css">
-<link rel="stylesheet" href="reveal.js/css/theme/default.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/simple.css" id="theme">
 
 <!-- For syntax highlighting -->
 <link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
@@ -24,7 +24,7 @@ document.write( '<link rel="stylesheet" href="reveal.js/css/print/' + ( window.l
 <!--[if lt IE 9]>
 <script src="reveal.js/lib/js/html5shiv.js"></script>
 <![endif]-->
-<!--
+
 <style type="text/css">
     .clearfix{*zoom:1;}.clearfix:before,.clearfix:after{display:table;content:"";line-height:0;}
 .clearfix:after{clear:both;}
@@ -1621,11 +1621,11 @@ h1:hover .anchor-link,h2:hover .anchor-link,h3:hover .anchor-link,h4:hover .anch
 .highlight .gr { color: #FF0000 } /* Generic.Error */
 .highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
 .highlight .gi { color: #00A000 } /* Generic.Inserted */
-.highlight .go { color: #808080 } /* Generic.Output */
+.highlight .go { color: #888888 } /* Generic.Output */
 .highlight .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
 .highlight .gs { font-weight: bold } /* Generic.Strong */
 .highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
-.highlight .gt { color: #0040D0 } /* Generic.Traceback */
+.highlight .gt { color: #0044DD } /* Generic.Traceback */
 .highlight .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
 .highlight .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
 .highlight .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
@@ -1669,7 +1669,7 @@ h1:hover .anchor-link,h2:hover .anchor-link,h3:hover .anchor-link,h4:hover .anch
 .highlight .vi { color: #19177C } /* Name.Variable.Instance */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
- -->
+
 
 <style type="text/css">
 /* Overrides of notebook CSS for static HTML export */
@@ -1734,47 +1734,217 @@ text-align: inherit;
 <section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="raspador">Raspador</h1>
-<p>Mini-biblioteca para extração de dados em documentos semi-estruturados</p>
+<h1 id="raspador">Raspador</h1>
+<p>Mini-biblioteca para extração de dados em documentos semi-estruturados</p>
 </div></section>
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="sobre-mim">Sobre mim</h2>
-<ul>
-<li>Desenvolvedor desde 2003</li>
-<li>Trabalho na NCR Corporation</li>
-<li>Python não é minha linguagem primária (ainda!)</li>
-</ul>
+<h2 id="sobre-mim">Sobre mim</h2>
+<ul>
+<li>Desenvolvedor desde 2003</li>
+<li>Trabalho na NCR Corporation</li>
+<li>Na NCR, Python não é a linguagem primária</li>
+</ul>
 </div></section>
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="será-que-funciona">Será que funciona?</h2>
-<pre><code>from raspador import history</code></pre>
-<ul>
-<li>Prova de conceito para extração de dados de espelhos MFD</li>
-<li>Virou código de base do projeto</li>
-</ul>
+<pre><code>from raspador import history</code></pre>
+<ul>
+<li>Prova de conceito para extração de dados de espelhos MFD</li>
+<li>Virou código de base do projeto</li>
+</ul>
 </div></section>
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="ferramentas">Ferramentas</h2>
-<ul>
-<li>lxml</li>
-<li>regex</li>
-<li>Scrapy</li>
-<li>PyQuery</li>
-<li>Scrapely (magia negra)</li>
-<li>NLTK</li>
-</ul>
+<h2 id="o-que">O que?</h2>
+<ul>
+<li>Extrair dados de arquivos texto que não foram projetados para isso.</li>
+</ul>
+</div></section>
+    </section><section>
+    <section>
+<h2>Dados do cupom</h2>
+
+<pre><code class="text">
+       RAZÃO SOCIAL
+Meu Endereço      Minha Cidade      Meu Telefone
+CNPJ: 40.100.280/0001-25       IE:   600020060001        
+IM:   36/3372             
+ 18/01/2013 11:07:04        CCF:002902 COO:007490
+       CUPOM FISCAL      
+ITEM CÓDIGO DESCRIÇÃO QTD.UN.VL UNIT R$ ST A/T VL ITEM R$
+ 001 1 prd1 esys isento                       1UN I1 1,00€
+ 002 2 prd2 esys Nincid                       1UN N1 2,00€
+ 003 9999999999991 PIZZAS                    1UN I1 14,33€
+Subtotal  R$                              17,33
+ACRÉSCIMO                                 +0,30€
+  TOTAL   R$        17,63
+Dinheiro                                  17,63
+------------------------------------------------
+MD5: A3BBE73BD09B18ECE607A50F92868A4E        
+Consumo da mesa 1 - SEM EMISSAO CONFERENCIA MESA
+
+mesa-Seq.: 1-2
+
+   Mensagem nao programada                   
+   Mensagem nao programada                   
+02B 131B4 35A4E F59000 B6 59504C 72A1E 0669F 027
+FABRICANTE     MODELO              
+ECF-IF    VERSÃO:01.01.00     ECF:001    Lj:    
+BBBBBBBBBBAABFCDEI           18/01/2013 11:07:06 
+FAB:XX000000000000207053                   BR
+</code></pre>
+</section><section>
+<h2> Dados do cupom</h2>
+
+<pre><code class="python">
+{
+    'COO': 7490,
+    'CCF': 2902,
+    'Total': 17.63,
+    'Acrescimo': 0.30,
+    'Cancelado': False,
+    'Cancelamento': False,
+    'DataDeEmissao': datetime(2013, 01, 18, 11, 7, 4),
+    'NumeroDeSerie': 'DR0510BR000000207153',
+    'NumeroDoEcf': 1,
+    'Itens': [
+        {
+            'Item': 1,
+            'Codigo': '1',
+            'Descricao': 'prd1 esys isento',
+            'Qtd': 1,
+            'Unidade': 'UN',
+            'Preco': 1,
+            'Total': 1,
+            'Cancelado': False,
+            'Aliquota': {
+                'Codigo': 'I1',
+                'Percentual': 0,
+            },
+        },
+        {
+            'Item': 2,
+            'Codigo': '2',
+            'Descricao': '2 prd2 esys Nincid',
+            'Qtd': 1,
+            'Unidade': 'UN',
+            'Preco': 2,
+            'Total': 2,
+            'Cancelado': False,
+            'Aliquota': {
+                'Codigo': 'N1',
+                'Percentual': 0,
+            },
+        },
+        {
+            'Item': 3,
+            'Codigo': '9999999999991',
+            'Descricao': 'PIZZAS',
+            'Qtd': 1,
+            'Unidade': 'UN',
+            'Preco': 14.33,
+            'Total': 14.33,
+            'Cancelado': False,
+            'Aliquota': {
+                'Codigo': 'I1',
+                'Percentual': 0,
+            },
+        },
+    ]
+}
+</code></pre>
+</section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="outro-parser">Outro parser?</h2>
+<ul>
+<li>lxml (XPath, cssselectors)</li>
+<li>html5lib (html parser)</li>
+<li>BeautifulSoup (tree parser api)</li>
+<li>PyQuery (cssselectors)</li>
+<li>Scrapely (magia negra)</li>
+<li>Scrapy (crawler: request, responsing)</li>
+<li>pyparsing (grammar)</li>
+<li>NLTK (grammar)</li>
+<li>Plain Python + regex</li>
+</ul>
 </div></section>
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="exemplo">Exemplo</h2>
-<p>http://www.sptrans.com.br/indicadores/historico_fluxo-caixa.aspx</p>
+<h2 id="problema">Problema</h2>
+<ul>
+<li>Extrair dados em documentos de texto
+<ul>
+<li>Texto sem marcação</li>
+<li>Arquivos grandes</li>
+</ul></li>
+<li>Pequenas variações entre arquivos</li>
+<li>Precisão na extração dos dados</li>
+</ul>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="opções">Opções?</h2>
+<ul>
+<li><del>
+lxml</del> (XPath, cssselectors)</li>
+<li><del>
+html5lib</del> (html parser)</li>
+<li><del>
+BeautifulSoup</del> (tree parser api)</li>
+<li><del>
+PyQuery</del> (cssselectors)</li>
+<li><del>
+Scrapely</del> (magia negra)</li>
+<li><del>
+Scrapy</del> (crawler: request, responsing)</li>
+<li>pyparsing (grammar)</li>
+<li>NLTK (grammar)</li>
+<li><strong>Plain Python + regex</strong></li>
+</ul>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="objetivos">Objetivos</h2>
+<ul>
+<li>Reduzir complexidade
+<ul>
+<li>Semântica</li>
+<li>Composição</li>
+</ul></li>
+<li>Código testável</li>
+</ul>
+</div></section>
+    </section><section>
+    <section>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">raspador</span>
+
+<span class="k">class</span> 
+</pre></div>
+
+</div>
+</div>
+
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="exemplo">Exemplo</h2>
+<p>http://www.sptrans.com.br/indicadores/historico_fluxo-caixa.aspx</p>
 </div></section>
     </section>
 </div>
