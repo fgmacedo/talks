@@ -1903,6 +1903,23 @@ FAB:XX000000000000207053                   BR
 <p>Write only code</p>
 </blockquote>
 </div>
+    </div></section><section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>O que faz?</p>
+<pre><code>res = []
+for linha in entrada.splitlines():
+    if not linha:
+        continue
+    item = {}
+    for parte in linha.split():
+        k, v = parte.split(&#39;:&#39;)
+        item[k] = v
+    res.append(item)</code></pre>
+</div><div class="fragment">
+    
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Você entende o código, mas ele não tem significado.</p>
+</div>
     </div></section>
     </section><section>
     <section>
@@ -1912,6 +1929,27 @@ FAB:XX000000000000207053                   BR
 <p>Some people, when confronted with a problem, think &quot;I know, I'll use regular expressions.&quot; Now they have two problems. (Jamie Zawinski, 1997)</p>
 </blockquote>
 </div></section><section>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="c"># O que isso faz?</span>
+<span class="n">regex</span> <span class="o">=</span> <span class="s">&quot;^((([!#$%&amp;&#39;*+\-/=?^_`{|}~\w])|([!#$%&amp;&#39;*+\-/=?^_`{|}~\w][!#$%&amp;&#39;*+\-/=?^_`{|}~\.\w]{0,}[!#$%&amp;&#39;*+\-/=?^_`{|}~\w]))[@]\w+([-.]\w+)*\.\w+([-.]\w+)*)$&quot;</span>
+</pre></div>
+
+</div>
+</div>
+
+</div><div class="fragment">
+    
+<div class="text_cell_render border-box-sizing rendered_html">
+<blockquote>
+<p>Email validation - RFC 2821, 2822 compliant</p>
+</blockquote>
+</div>
+    </div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
 <div class="figure">
 <img src="static/pimentas.jpg" alt="Não exagere" /><p class="caption">Não exagere</p>
@@ -1927,8 +1965,8 @@ FAB:XX000000000000207053                   BR
 <ul>
 <li>Reduzir complexidade
 <ul>
-<li>Semântica</li>
-<li>Composição</li>
+<li>Incluir semântica</li>
+<li>Favorecer composição</li>
 </ul></li>
 <li>Código testável</li>
 </ul>
@@ -2082,6 +2120,17 @@ datetime.date(2013, 1, 2)</code></pre>
 <h2 id="nem-tudo-que-é-texto">Nem tudo que é texto</h2>
 <p>... está em texto</p>
 <p><a href="http://www.foolabs.com/xpdf/download.html">pdftotext</a></p>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="regular-expressions">Regular expressions</h2>
+<ul>
+<li><p>Debuggex: visualize suas REs</p>
+<p><a href="https://www.debuggex.com/">https://www.debuggex.com/</a></p></li>
+<li><p>Aurélio</p>
+<p><a href="http://aurelio.net/regex/">Expressões regulares, uma abordagem divertida</a></p></li>
+</ul>
 </div></section>
     </section><section>
     <section>
