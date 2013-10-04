@@ -1918,7 +1918,7 @@ for linha in entrada.splitlines():
 </div><div class="fragment">
     
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Você entende o código, mas ele não tem significado.</p>
+<p>Você entende o código, mas não tem significado.</p>
 </div>
     </div></section>
     </section><section>
@@ -2117,9 +2117,21 @@ datetime.date(2013, 1, 2)</code></pre>
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="parser">Parser</h2>
+<ul>
+<li>Responsável por conduzir a iteração</li>
+<li>Podem ser alinhados</li>
+</ul>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="nem-tudo-que-é-texto">Nem tudo que é texto</h2>
 <p>... está em texto</p>
 <p><a href="http://www.foolabs.com/xpdf/download.html">pdftotext</a></p>
+<p>Dica:</p>
+<pre><code>pdftotext -layout &lt;arquivo.pdf&gt;</code></pre>
+<p>Mantém a estrutura do arquivo gerado próxima com o original.</p>
 </div></section>
     </section><section>
     <section>
@@ -2148,6 +2160,17 @@ datetime.date(2013, 1, 2)</code></pre>
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="testes">Testes</h2>
+<p>Testes automatizados com <a href="http://tox.readthedocs.org/en/latest/">tox</a>.</p>
+<pre><code>    $ tox</code></pre>
+<p>Bibliotecas de terceiros para os testes são instaladas automaticamente no ambiente virtual da versão do Python:</p>
+<pre><code>    nose==1.3.0
+    coverage==3.6
+    flake8==2.0</code></pre>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="é-nosso">É nosso</h2>
 <p><a href="https://travis-ci.org/fgmacedo/raspador"><img src="https://travis-ci.org/fgmacedo/raspador.png" alt="BuildStatus" /></a> <a href="https://coveralls.io/r/fgmacedo/raspador"><img src="https://coveralls.io/repos/fgmacedo/raspador/badge.png" alt="Cobertura" /></a> <a href="https://pypi.python.org/pypi/raspador"><img src="https://pypip.in/v/raspador/badge.png" alt="Versão" /></a> <a href="https://crate.io/packages/raspador/"><img src="https://pypip.in/d/raspador/badge.png" alt="Downloads" /></a></p>
 <p><a href="https://github.com/fgmacedo/raspador">https://github.com/fgmacedo/raspador</a></p>
@@ -2162,6 +2185,7 @@ datetime.date(2013, 1, 2)</code></pre>
 <p><a href="https://twitter.com/fgmacedo">@fgmacedo</a></p>
 <p><a href="http://fgmacedo.com/">fgmacedo.com</a></p>
 <p><a href="fgmacedo@gmail.com">fgmacedo@gmail.com</a></p>
+<p><a href="http://code.fgmacedo.com/talks">http://code.fgmacedo.com/talks</a> (Slides)</p>
 </div></section>
     </section>
 </div>
