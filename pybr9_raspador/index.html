@@ -1621,11 +1621,11 @@ h1:hover .anchor-link,h2:hover .anchor-link,h3:hover .anchor-link,h4:hover .anch
 .highlight .gr { color: #FF0000 } /* Generic.Error */
 .highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
 .highlight .gi { color: #00A000 } /* Generic.Inserted */
-.highlight .go { color: #888888 } /* Generic.Output */
+.highlight .go { color: #808080 } /* Generic.Output */
 .highlight .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
 .highlight .gs { font-weight: bold } /* Generic.Strong */
 .highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
-.highlight .gt { color: #0044DD } /* Generic.Traceback */
+.highlight .gt { color: #0040D0 } /* Generic.Traceback */
 .highlight .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
 .highlight .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
 .highlight .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
@@ -1734,52 +1734,52 @@ text-align: inherit;
 <section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="raspador">Raspador</h1>
-<p>Mini-biblioteca para extração de dados em documentos semi-estruturados</p>
+<h1 id="raspador">Raspador</h1>
+<p>Mini-biblioteca para extração de dados em documentos semi-estruturados</p>
 </div></section>
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="sobre-mim">Sobre mim</h2>
-<ul>
-<li>Desenvolvedor desde 2003</li>
-<li>Conheci Python em 2009</li>
-<li>Trabalho na NCR Corporation</li>
-<li>Na NCR, Python não é a linguagem primária</li>
-</ul>
+<h2 id="sobre-mim">Sobre mim</h2>
+<ul>
+<li>Desenvolvedor desde 2003</li>
+<li>Conheci Python em 2009</li>
+<li>Trabalho na NCR Corporation</li>
+<li>Na NCR, Python não é a linguagem primária</li>
+</ul>
 </div></section>
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<pre><code>from raspador import history</code></pre>
-<ul>
-<li>Foi utilizado para extração de dados de Espelhos MFD</li>
-<li>Virou código de base do projeto</li>
-</ul>
+<pre><code>from raspador import history</code></pre>
+<ul>
+<li>Foi utilizado para extração de dados de Espelhos MFD</li>
+<li>Virou código de base do projeto</li>
+</ul>
 </div></section>
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="outro-parser">Outro parser?</h2>
-<ul>
-<li>lxml (XPath, cssselectors)</li>
-<li>html5lib (html parser)</li>
-<li>BeautifulSoup (tree parser api)</li>
-<li>PyQuery (cssselectors)</li>
-<li>Scrapely (magia negra)</li>
-<li>Scrapy (crawler: request, responsing)</li>
-<li>pyparsing (grammar)</li>
-<li>NLTK (grammar)</li>
-<li>Plain Python + regex</li>
-</ul>
+<h2 id="outro-parser">Outro parser?</h2>
+<ul>
+<li>lxml (XPath, cssselectors)</li>
+<li>html5lib (html parser)</li>
+<li>BeautifulSoup (tree parser api)</li>
+<li>PyQuery (cssselectors)</li>
+<li>Scrapely (magia negra)</li>
+<li>Scrapy (crawler: request, responsing)</li>
+<li>pyparsing (grammar)</li>
+<li>NLTK (grammar)</li>
+<li>Plain Python + regex</li>
+</ul>
 </div></section>
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="o-que">O que?</h2>
-<ul>
-<li>Extrair dados de arquivos texto que não foram projetados para isso.</li>
-</ul>
+<h2 id="o-que">O que?</h2>
+<ul>
+<li>Extrair dados de arquivos texto que não foram projetados para isso.</li>
+</ul>
 </div></section><section>
 <pre>
 CNPJ: 40.100.280/0001-25       IE:   600020060001        
@@ -1861,79 +1861,73 @@ FAB:XX000000000000207053                   BR
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="problema">Problema</h2>
-<ul>
-<li>Extrair dados em documentos de texto
-<ul>
-<li>Texto sem marcação</li>
-<li>Arquivos grandes</li>
-</ul></li>
-<li>Pequenas variações entre arquivos</li>
-<li>Precisão na extração dos dados</li>
-</ul>
+<h2 id="problema">Problema</h2>
+<ul>
+<li>Extrair dados em documentos de texto
+<ul>
+<li>Texto sem marcação</li>
+<li>Arquivos grandes</li>
+</ul></li>
+<li>Pequenas variações entre arquivos</li>
+<li>Precisão na extração dos dados</li>
+</ul>
 </div></section>
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="opções">Opções?</h2>
-<ul>
-<li><del>
-lxml</del> (XPath, cssselectors)</li>
-<li><del>
-html5lib</del> (html parser)</li>
-<li><del>
-BeautifulSoup</del> (tree parser api)</li>
-<li><del>
-PyQuery</del> (cssselectors)</li>
-<li><del>
-Scrapely</del> (magia negra)</li>
-<li><del>
-Scrapy</del> (crawler: request, responsing)</li>
-<li>pyparsing (grammar)</li>
-<li>NLTK (grammar)</li>
-<li><strong>Plain Python + regex</strong></li>
-</ul>
+<h2 id="opções">Opções?</h2>
+<ul>
+<li><del>lxml</del> (XPath, cssselectors)</li>
+<li><del>html5lib</del> (html parser)</li>
+<li><del>BeautifulSoup</del> (tree parser api)</li>
+<li><del>PyQuery</del> (cssselectors)</li>
+<li><del>Scrapely</del> (magia negra)</li>
+<li><del>Scrapy</del> (crawler: request, responsing)</li>
+<li>pyparsing (grammar)</li>
+<li>NLTK (grammar)</li>
+<li><strong>Plain Python + regex</strong></li>
+</ul>
 </div></section>
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="plain-python-regex">Plain Python + regex</h2>
-<ul>
-<li>Fácil de escrever</li>
-<li>Difícil de manter</li>
-</ul>
+<h2 id="plain-python-regex">Plain Python + regex</h2>
+<ul>
+<li>Fácil de escrever</li>
+<li>Difícil de manter</li>
+</ul>
 </div><div class="fragment">
     
 <div class="text_cell_render border-box-sizing rendered_html">
-<blockquote>
-<p>Write only code</p>
-</blockquote>
+<blockquote>
+<p>Write only code</p>
+</blockquote>
 </div>
     </div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>O que faz?</p>
-<pre><code>res = []
-for linha in entrada.splitlines():
-    if not linha:
-        continue
-    item = {}
-    for parte in linha.split():
-        k, v = parte.split(&#39;:&#39;)
-        item[k] = v
-    res.append(item)</code></pre>
+<p>O que faz?</p>
+<pre><code>res = []
+for linha in entrada.splitlines():
+    if not linha:
+        continue
+    item = {}
+    for parte in linha.split():
+        k, v = parte.split(&#39;:&#39;)
+        item[k] = v
+    res.append(item)</code></pre>
 </div><div class="fragment">
     
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Você entende o código, mas não tem significado.</p>
+<p>Você entende o código, mas não tem significado.</p>
 </div>
     </div></section>
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="regular-expressions">Regular expressions</h2>
-<blockquote>
-<p>Some people, when confronted with a problem, think &quot;I know, I'll use regular expressions.&quot; Now they have two problems. (Jamie Zawinski, 1997)</p>
-</blockquote>
+<h2 id="regular-expressions">Regular expressions</h2>
+<blockquote>
+<p>Some people, when confronted with a problem, think &quot;I know, I'll use regular expressions.&quot; Now they have two problems. (Jamie Zawinski, 1997)</p>
+</blockquote>
 </div></section><section>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
@@ -1951,247 +1945,247 @@ In&nbsp;[]:
 </div><div class="fragment">
     
 <div class="text_cell_render border-box-sizing rendered_html">
-<blockquote>
-<p>Email validation - RFC 2821, 2822 compliant</p>
-</blockquote>
+<blockquote>
+<p>Email validation - RFC 2821, 2822 compliant</p>
+</blockquote>
 </div>
     </div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<div class="figure">
-<img src="static/pimentas.jpg" alt="Não exagere" /><p class="caption">Não exagere</p>
-</div>
-<blockquote>
-<p><a href="http://www.codinghorror.com/blog/2008/06/regular-expressions-now-you-have-two-problems.html">I love regular expressions</a> (Jeff Atwood)</p>
-</blockquote>
+<div class="figure">
+<img src="static/pimentas.jpg" alt="Não exagere" /><p class="caption">Não exagere</p>
+</div>
+<blockquote>
+<p><a href="http://www.codinghorror.com/blog/2008/06/regular-expressions-now-you-have-two-problems.html">I love regular expressions</a> (Jeff Atwood)</p>
+</blockquote>
 </div></section>
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="objetivos">Objetivos</h2>
-<ul>
-<li>Reduzir complexidade
-<ul>
-<li>Incluir semântica</li>
-<li>Favorecer composição</li>
-</ul></li>
-<li>Código testável</li>
-</ul>
+<h2 id="objetivos">Objetivos</h2>
+<ul>
+<li>Reduzir complexidade
+<ul>
+<li>Incluir semântica</li>
+<li>Favorecer composição</li>
+</ul></li>
+<li>Código testável</li>
+</ul>
 </div></section>
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>pessoa_parser.py</p>
-<pre><code>from raspador import Parser
-from raspador import StringField, IntegerField
-
-class ParserDeInformacoesPessoais(Parser):
-    Nome = StringField(r&#39;Nome: (.*)&#39;)
-    Idade = IntegerField(r&#39;(\d+) anos&#39;)</code></pre>
+<p>pessoa_parser.py</p>
+<pre><code>from raspador import Parser
+from raspador import StringField, IntegerField
+
+class ParserDeInformacoesPessoais(Parser):
+    Nome = StringField(r&#39;Nome: (.*)&#39;)
+    Idade = IntegerField(r&#39;(\d+) anos&#39;)</code></pre>
 </div><div class="fragment">
     
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>A definição de um atributo e o tipo de dado agregam semântica</p>
+<p>A definição de um atributo e o tipo de dado agregam semântica</p>
 </div>
     </div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>pessoa.txt</p>
-<blockquote>
-<p>Nome: Guido van Rossum</p>
-<p>Guido van Rossum é um programador de computadores dos Países Baixos que é mais conhecido por ser o autor da linguagem de programação Python. Wikipédia</p>
-<p>Nascimento: 31 de janeiro de 1956 (57 anos), Países Baixos</p>
-<p>Cônjuge: Kim Knapp (desde 2000)</p>
-<p>Educação: Universidade de Amsterdã (1982)</p>
-<p>Filho: Orlijn Michiel Knapp-van Rossum</p>
-<p>Irmão: Just van Rossum</p>
-</blockquote>
+<p>pessoa.txt</p>
+<blockquote>
+<p>Nome: Guido van Rossum</p>
+<p>Guido van Rossum é um programador de computadores dos Países Baixos que é mais conhecido por ser o autor da linguagem de programação Python. Wikipédia</p>
+<p>Nascimento: 31 de janeiro de 1956 (57 anos), Países Baixos</p>
+<p>Cônjuge: Kim Knapp (desde 2000)</p>
+<p>Educação: Universidade de Amsterdã (1982)</p>
+<p>Filho: Orlijn Michiel Knapp-van Rossum</p>
+<p>Irmão: Just van Rossum</p>
+</blockquote>
 </div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>pessoa_utilizacao.py</p>
-<pre><code>from pessoa_parser import ParserDeInformacoesPessoais
-
-parser = ParserDeInformacoesPessoais()
-
-with open(&#39;pessoa.txt&#39;) as f:
-    for pessoa in parser.parse(f):
-        print(pessoa.Nome)
-        print(pessoa.Idade)</code></pre>
+<p>pessoa_utilizacao.py</p>
+<pre><code>from pessoa_parser import ParserDeInformacoesPessoais
+
+parser = ParserDeInformacoesPessoais()
+
+with open(&#39;pessoa.txt&#39;) as f:
+    for pessoa in parser.parse(f):
+        print(pessoa.Nome)
+        print(pessoa.Idade)</code></pre>
 </div><div class="fragment">
     
 <div class="text_cell_render border-box-sizing rendered_html">
-<blockquote>
-<p>Guido van Rossum</p>
-</blockquote>
-<blockquote>
-<p>57</p>
-</blockquote>
+<blockquote>
+<p>Guido van Rossum</p>
+</blockquote>
+<blockquote>
+<p>57</p>
+</blockquote>
 </div>
     </div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<pre><code># parser.parse retorna um generator
-with open(&#39;pessoa.txt&#39;) as f:
-    g = parser.parse(f)
-    print(type(g))
-    print(next(g))</code></pre>
+<pre><code># parser.parse retorna um generator
+with open(&#39;pessoa.txt&#39;) as f:
+    g = parser.parse(f)
+    print(type(g))
+    print(next(g))</code></pre>
 </div><div class="fragment">
     
 <div class="text_cell_render border-box-sizing rendered_html">
-<blockquote>
-<p><code>&lt;type 'generator'&gt;</code></p>
-</blockquote>
-<blockquote>
-<p><code>Dictionary([('Nome', 'Guido van Rossum'), ('Idade', 57)])</code></p>
-</blockquote>
+<blockquote>
+<p><code>&lt;type 'generator'&gt;</code></p>
+</blockquote>
+<blockquote>
+<p><code>Dictionary([('Nome', 'Guido van Rossum'), ('Idade', 57)])</code></p>
+</blockquote>
 </div>
     </div></section>
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="raspador.item">raspador.item</h2>
-<pre><code>class Dictionary(OrderedDict):
-    &quot;&quot;&quot;
-    Dictionary that exposes keys as properties for 
-    easy read access.
-    &quot;&quot;&quot;
-    def __getattr__(self, name):
-        if name in self:
-            return self[name]
-        raise AttributeError(
-            &quot;%s without attr &#39;%s&#39;&quot; %
-                (type(self).__name__, name))</code></pre>
+<h2 id="raspador.item">raspador.item</h2>
+<pre><code>class Dictionary(OrderedDict):
+    &quot;&quot;&quot;
+    Dictionary that exposes keys as properties for 
+    easy read access.
+    &quot;&quot;&quot;
+    def __getattr__(self, name):
+        if name in self:
+            return self[name]
+        raise AttributeError(
+            &quot;%s without attr &#39;%s&#39;&quot; %
+                (type(self).__name__, name))</code></pre>
 </div></section>
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="campos-built-in">Campos built-in</h2>
-<pre><code>from raspador import (
-    BaseField, IntegerField,
-    StringField, BooleanField,
-    FloatField, BRFloatField,
-    DateField, DateTimeField)</code></pre>
+<h2 id="campos-built-in">Campos built-in</h2>
+<pre><code>from raspador import (
+    BaseField, IntegerField,
+    StringField, BooleanField,
+    FloatField, BRFloatField,
+    DateField, DateTimeField)</code></pre>
 </div><div class="fragment">
     
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>TODO: <code>BRFloatField</code>, definir sistema de localização.</p>
+<p>TODO: <code>BRFloatField</code>, definir sistema de localização.</p>
 </div>
     </div></section>
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="basefield">BaseField</h2>
-<p>search</p>
-<pre><code>&gt;&gt;&gt; s = &quot;02/01/2013 10:21:51           COO:022734&quot;
-&gt;&gt;&gt; field = BaseField(search=r&#39;COO:(\d+)&#39;)
-&gt;&gt;&gt; field.parse_block(s)
-&#39;022734&#39;</code></pre>
+<h2 id="basefield">BaseField</h2>
+<p>search</p>
+<pre><code>&gt;&gt;&gt; s = &quot;02/01/2013 10:21:51           COO:022734&quot;
+&gt;&gt;&gt; field = BaseField(search=r&#39;COO:(\d+)&#39;)
+&gt;&gt;&gt; field.parse_block(s)
+&#39;022734&#39;</code></pre>
 </div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="basefield">BaseField</h2>
-<p>input_processor</p>
-<pre><code>&gt;&gt;&gt; s = &quot;02/01/2013 10:21:51           COO:022734&quot;
-&gt;&gt;&gt; def double(value):
-...     return int(value) * 2
-...
-&gt;&gt;&gt; field = BaseField(r&#39;COO:(\d+)&#39;, 
-...                   input_processor=double)
-&gt;&gt;&gt; field.parse_block(s)  # 45468 = 2 x 22734
-45468</code></pre>
+<h2 id="basefield">BaseField</h2>
+<p>input_processor</p>
+<pre><code>&gt;&gt;&gt; s = &quot;02/01/2013 10:21:51           COO:022734&quot;
+&gt;&gt;&gt; def double(value):
+...     return int(value) * 2
+...
+&gt;&gt;&gt; field = BaseField(r&#39;COO:(\d+)&#39;, 
+...                   input_processor=double)
+&gt;&gt;&gt; field.parse_block(s)  # 45468 = 2 x 22734
+45468</code></pre>
 </div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="basefield">BaseField</h2>
-<p>is_list</p>
-<pre><code>&gt;&gt;&gt; s = &quot;02/01/2013 10:21:51           COO:022734&quot;
-&gt;&gt;&gt; field = BaseField(r&#39;COO:(\d+)&#39;, is_list=True)
-&gt;&gt;&gt; field.parse_block(s)
-[&#39;022734&#39;]</code></pre>
+<h2 id="basefield">BaseField</h2>
+<p>is_list</p>
+<pre><code>&gt;&gt;&gt; s = &quot;02/01/2013 10:21:51           COO:022734&quot;
+&gt;&gt;&gt; field = BaseField(r&#39;COO:(\d+)&#39;, is_list=True)
+&gt;&gt;&gt; field.parse_block(s)
+[&#39;022734&#39;]</code></pre>
 </div><div class="fragment">
     
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Por convenção, quando o campo retorna uma lista, os valores serão acumulados.</p>
+<p>Por convenção, quando o campo retorna uma lista, os valores serão acumulados.</p>
 </div>
     </div></section>
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="datefield">DateField</h2>
-<p>format_string</p>
-<pre><code>&gt;&gt;&gt; s = &quot;2013-01-02T10:21:51           COO:022734&quot;
-&gt;&gt;&gt; field = DateField(r&#39;^(\d+-\d+-\d+)&#39;, 
-...                   format_string=&#39;%Y-%m-%d&#39;)
-&gt;&gt;&gt; field.parse_block(s)
-datetime.date(2013, 1, 2)</code></pre>
+<h2 id="datefield">DateField</h2>
+<p>format_string</p>
+<pre><code>&gt;&gt;&gt; s = &quot;2013-01-02T10:21:51           COO:022734&quot;
+&gt;&gt;&gt; field = DateField(r&#39;^(\d+-\d+-\d+)&#39;, 
+...                   format_string=&#39;%Y-%m-%d&#39;)
+&gt;&gt;&gt; field.parse_block(s)
+datetime.date(2013, 1, 2)</code></pre>
 </div></section>
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="parser">Parser</h2>
-<ul>
-<li>Responsável por conduzir a iteração</li>
-<li>Podem ser alinhados</li>
-</ul>
+<h2 id="parser">Parser</h2>
+<ul>
+<li>Responsável por conduzir a iteração</li>
+<li>Podem ser alinhados</li>
+</ul>
 </div></section>
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="nem-tudo-que-é-texto">Nem tudo que é texto</h2>
-<p>... está em texto</p>
-<p><a href="http://www.foolabs.com/xpdf/download.html">pdftotext</a></p>
-<p>Dica:</p>
-<pre><code>pdftotext -layout &lt;arquivo.pdf&gt;</code></pre>
-<p>Mantém a estrutura do arquivo gerado próxima com o original.</p>
+<h2 id="nem-tudo-que-é-texto">Nem tudo que é texto</h2>
+<p>... está em texto</p>
+<p><a href="http://www.foolabs.com/xpdf/download.html">pdftotext</a></p>
+<p>Dica:</p>
+<pre><code>pdftotext -layout &lt;arquivo.pdf&gt;</code></pre>
+<p>Mantém a estrutura do arquivo gerado próxima com o original.</p>
 </div></section>
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="regular-expressions">Regular expressions</h2>
-<ul>
-<li><p>Debuggex: visualize suas REs</p>
-<p><a href="https://www.debuggex.com/">https://www.debuggex.com/</a></p></li>
-<li><p>Aurélio</p>
-<p><a href="http://aurelio.net/regex/">Expressões regulares, uma abordagem divertida</a></p></li>
-</ul>
+<h2 id="regular-expressions">Regular expressions</h2>
+<ul>
+<li><p>Debuggex: visualize suas REs</p>
+<p><a href="https://www.debuggex.com/">https://www.debuggex.com/</a></p></li>
+<li><p>Aurélio</p>
+<p><a href="http://aurelio.net/regex/">Expressões regulares, uma abordagem divertida</a></p></li>
+</ul>
 </div></section>
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="compatibilidade">Compatibilidade</h2>
-<ul>
-<li>CPython 2.6+
-<ul>
-<li>2.6: pip install ordereddict</li>
-</ul></li>
-<li>CPython 3.2+</li>
-<li>PyPy</li>
-</ul>
+<h2 id="compatibilidade">Compatibilidade</h2>
+<ul>
+<li>CPython 2.6+
+<ul>
+<li>2.6: pip install ordereddict</li>
+</ul></li>
+<li>CPython 3.2+</li>
+<li>PyPy</li>
+</ul>
 </div></section>
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="testes">Testes</h2>
-<p>Testes automatizados com <a href="http://tox.readthedocs.org/en/latest/">tox</a>.</p>
-<pre><code>    $ tox</code></pre>
-<p>Bibliotecas de terceiros para os testes são instaladas automaticamente no ambiente virtual da versão do Python:</p>
-<pre><code>    nose==1.3.0
-    coverage==3.6
-    flake8==2.0</code></pre>
+<h2 id="testes">Testes</h2>
+<p>Testes automatizados com <a href="http://tox.readthedocs.org/en/latest/">tox</a>.</p>
+<pre><code>    $ tox</code></pre>
+<p>Bibliotecas de terceiros para os testes são instaladas automaticamente no ambiente virtual da versão do Python:</p>
+<pre><code>    nose==1.3.0
+    coverage==3.6
+    flake8==2.0</code></pre>
 </div></section>
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="é-nosso">É nosso</h2>
-<p><a href="https://travis-ci.org/fgmacedo/raspador"><img src="https://travis-ci.org/fgmacedo/raspador.png" alt="BuildStatus" /></a> <a href="https://coveralls.io/r/fgmacedo/raspador"><img src="https://coveralls.io/repos/fgmacedo/raspador/badge.png" alt="Cobertura" /></a> <a href="https://pypi.python.org/pypi/raspador"><img src="https://pypip.in/v/raspador/badge.png" alt="Versão" /></a> <a href="https://crate.io/packages/raspador/"><img src="https://pypip.in/d/raspador/badge.png" alt="Downloads" /></a></p>
-<p><a href="https://github.com/fgmacedo/raspador">https://github.com/fgmacedo/raspador</a></p>
-<p><a href="https://pypi.python.org/pypi/raspador">https://pypi.python.org/pypi/raspador</a></p>
-<p><a href="https://raspador.readthedocs.org">https://raspador.readthedocs.org/</a></p>
+<h2 id="é-nosso">É nosso</h2>
+<p><a href="https://travis-ci.org/fgmacedo/raspador"><img src="https://travis-ci.org/fgmacedo/raspador.png" alt="BuildStatus" /></a> <a href="https://coveralls.io/r/fgmacedo/raspador"><img src="https://coveralls.io/repos/fgmacedo/raspador/badge.png" alt="Cobertura" /></a> <a href="https://pypi.python.org/pypi/raspador"><img src="https://pypip.in/v/raspador/badge.png" alt="Versão" /></a> <a href="https://crate.io/packages/raspador/"><img src="https://pypip.in/d/raspador/badge.png" alt="Downloads" /></a></p>
+<p><a href="https://github.com/fgmacedo/raspador">https://github.com/fgmacedo/raspador</a></p>
+<p><a href="https://pypi.python.org/pypi/raspador">https://pypi.python.org/pypi/raspador</a></p>
+<p><a href="https://raspador.readthedocs.org">https://raspador.readthedocs.org/</a></p>
 </div></section>
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="obrigado">Obrigado!</h2>
-<p>Fernando Macedo</p>
-<p><a href="http://twitter.com/fgmacedo/">@fgmacedo</a></p>
-<p><a href="http://fgmacedo.com/">fgmacedo.com</a></p>
-<p><a href="fgmacedo@gmail.com">fgmacedo@gmail.com</a></p>
-<p><a href="http://fgmacedo.github.io/talks/pybr9_raspador/">fgmacedo.github.io/talks/pybr9_raspador/</a> (Slides)</p>
+<h2 id="obrigado">Obrigado!</h2>
+<p>Fernando Macedo</p>
+<p><a href="http://twitter.com/fgmacedo/">@fgmacedo</a></p>
+<p><a href="http://fgmacedo.com/">fgmacedo.com</a></p>
+<p><a href="fgmacedo@gmail.com">fgmacedo@gmail.com</a></p>
+<p><a href="http://fgmacedo.github.io/talks/pybr9_raspador/">fgmacedo.github.io/talks/pybr9_raspador/</a> (Slides)</p>
 </div></section>
     </section>
 </div>
