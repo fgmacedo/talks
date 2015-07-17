@@ -1,0 +1,11 @@
+Django==1.8.3
+ipython==3.2.1
+Jinja2==2.7.3
+jsonschema==2.5.1
+mixer==5.1.6
+pytest==2.7.2
+pytest-django==2.8.0
+pyzmq==14.7.0
+tornado==4.2
+Pygments==2.0.2
+mistune==0.6
