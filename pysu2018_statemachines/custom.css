@@ -1,0 +1,23 @@
+body {
+    background-color: #eee;
+}
+
+.reveal {
+    font-size: 200% !important;
+}
+
+
+.full-width {
+  /* 1/3 of 60% = the 20% margin on either side */
+  margin-left: -38.33% !important;
+  margin-right: -33.33% !important;
+  max-width: 160% !important;
+  max-height: 160% !important;
+  position: relative;
+}
+
+
+div.text_cell.rendered .rendered_html {
+    overflow-x: visible !important;
+    overflow-y: visible !important;
+}

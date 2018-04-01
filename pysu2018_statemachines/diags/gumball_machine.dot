@@ -1,0 +1,28 @@
+digraph package_state_machine {
+    rankdir=LR;
+    bgcolor="transparent"
+    overlap=prism2000
+    overlap_shrink=true
+
+    node [
+        width=1.4,
+        height=1.4,
+        fixedsize=true,
+        fillcolor=white,
+        style="filled,solid"
+        shape="circle"
+    ]
+
+    edge [
+        splines="curved"
+        #labelfloat=true
+    ]
+
+
+    sem_balas -> sem_moeda [label="recarregar"];
+    sem_moeda -> com_moeda [label="inserir_moeda"];
+    com_moeda -> vendido [label="virar_alavanca"];
+    com_moeda -> sem_moeda [label="ejetar_moeda"];
+    vendido -> sem_balas [label="dispensar <balas = 0>"];
+    vendido -> sem_moeda [label="dispensar <balas > 0>"];
+}

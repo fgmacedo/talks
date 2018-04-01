@@ -1,0 +1,47 @@
+digraph semaphore {
+    rankdir=LR;
+    bgcolor="transparent"
+    overlap=prism2000
+    overlap_shrink=true
+
+    node [
+        color=black
+        fontcolor=black
+        width=1.4,
+        height=1.4,
+        fixedsize=true,
+        fillcolor=white,
+        style="filled,solid"
+        shape="circle"] red;
+    node [
+        color=black
+        fontcolor=black
+        width=1.4,
+        height=1.4,
+        fixedsize=true,
+        fillcolor=white,
+        style="filled,solid"
+        shape="circle"] green;
+    node [
+        color=black
+        fontcolor=black
+        width=1.4,
+        height=1.4,
+        fixedsize=true,
+        fillcolor=white,
+        style="filled,solid"
+        shape="circle"
+    ] yellow;
+
+    edge [
+        splines="curved"
+        color=lightgray
+        fontcolor=lightgray
+        #labelfloat=true
+    ]
+
+
+    green -> yellow [label="slowdown"];
+    yellow -> red [label="stop"];
+    red -> green [label="go"];
+}

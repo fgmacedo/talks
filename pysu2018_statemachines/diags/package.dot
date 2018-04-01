@@ -1,0 +1,54 @@
+digraph package_state_machine {
+    rankdir=LR;
+    bgcolor="transparent"
+    overlap=prism2000
+    overlap_shrink=true
+
+    node [
+        width=1.4,
+        height=1.4,
+        fixedsize=true,
+        fillcolor=white,
+        style="filled,solid"
+        shape = doublecircle
+    ] rejected cancelled dispatched;
+
+    node [
+        width=1.4,
+        height=1.4,
+        fixedsize=true,
+        fillcolor=white,
+        style="filled,solid"
+        shape="circle"
+    ]
+
+    edge [
+        splines="curved"
+        #labelfloat=true
+    ]
+
+
+    created -> scanned [label="scan"];
+    created -> rejected [label="scan"];
+    rejected -> scanned [label="scan"];
+    unfit -> scanned [label="scan"];
+    unfit -> rejected [label="scan"];
+    scanned -> measured [label="measure"];
+    scanned -> unfit [label="measure"];
+
+    measured -> waiting_routing [label="sort"];
+    measured -> rejected [label="sort"];
+    unfit -> unfit [label="sort"];
+    rejected -> unfit [label="sort"];
+
+    waiting_routing -> routed [label="route"];
+    routed -> dispatched [label="dispatch"];
+    # routed -> bagged [label="add_to_bag"];
+    # bagged -> routed [label="remove_from_bag"];
+    # bagged -> dispatched [label="dispatch"];
+    created -> cancelled [label="status_changed"];
+    created -> created [label="status_changed"];
+    dispatched -> dispatched [label="status_changed"];
+
+    created -> created [label="update"];
+}
